@@ -1,0 +1,31 @@
+package p0627;
+
+public class C0627_05 {
+
+	public static void main(String[] args) throws Exception{
+		method1();
+		
+//		try {
+//			method1(); // 넘길 곳이 없으면 		
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+		
+		System.out.println("프로그램을 종료합니다.");
+
+	}
+	
+	static void method1()throws Exception {
+		method2();
+	}
+	
+	static void method2() throws Exception { // 예외를 호출한 곳으로 넘김
+		throw new Exception();
+		
+//		try{
+//			throw new Exception(); // 강제로 예외처리	
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}
+	}
+}
